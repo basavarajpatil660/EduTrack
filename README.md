@@ -1,54 +1,45 @@
-# EduTrack
-
-> A role-based college management app — attendance, marks, and student records in one place.
+# EduTrack — College Management App
 
 ![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?style=flat-square&logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=black)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-brightgreen?style=flat-square)
-![Stars](https://img.shields.io/github/stars/basavarajpatil660/EduTrack?style=flat-square)
-![Forks](https://img.shields.io/github/forks/basavarajpatil660/EduTrack?style=flat-square)
+
+> A role-based college management app for students and teachers —
+> built with Flutter and powered by Supabase.
 
 ---
 
-## 🔍 Problem Statement
+## 📖 Project Overview
 
-Most colleges still track attendance and marks using paper registers or scattered
-spreadsheets — leading to data loss, no real-time visibility for students, and heavy
-manual work for teachers. There is no single, secure, role-aware platform built for
-this workflow.
-
----
-
-## 💡 Solution
-
-EduTrack is a Flutter mobile app that gives **teachers** a complete toolkit to manage
-students, mark attendance, and upload marks — while giving **students** instant, secure
-access to their own academic records. Everything is powered by Supabase with Row Level
-Security, ensuring no role can access data it shouldn't.
+EduTrack is a mobile application designed for colleges and universities.
+It provides a clean, secure platform where **teachers** can manage students,
+track attendance, and upload marks — while **students** can monitor their
+own academic progress in real time.
 
 ---
 
 ## ✨ Features
 
 ### 👨‍🏫 Teacher
-- Secure role-based login and registration
-- View and manage the full student list
+- Secure login and registration
+- View full student list
 - Add new students to the system
-- Mark daily attendance per student
+- Mark daily attendance
 - Upload internal and external marks
 
 ### 👨‍🎓 Student
-- Secure role-based login and registration
+- Secure login and registration
 - View personal attendance records
-- Track attendance percentage in real time
-- View uploaded marks from teachers
+- Check attendance percentage
+- View uploaded marks
 
 ### 🔐 General
+- Role-based authentication (Teacher / Student)
+- Secure backend with Row Level Security (RLS)
 - Material Design 3 UI with navy blue theme
-- Google Fonts and SVG rendering
-- PostgreSQL RLS policies — strict data isolation per role
+- Google Fonts & SVG rendering
 
 ---
 
@@ -57,9 +48,10 @@ Security, ensuring no role can access data it shouldn't.
 | Layer | Technology |
 |-------|-----------|
 | Frontend | Flutter (Dart) |
-| Backend | Supabase — Auth + PostgreSQL |
-| Database | PostgreSQL with Row Level Security |
-| UI System | Material Design 3, Google Fonts |
+| Backend | Supabase (Auth + PostgreSQL) |
+| Database | PostgreSQL with RLS Policies |
+| UI | Material Design 3, Google Fonts |
+| State | Flutter setState |
 
 ---
 
@@ -87,9 +79,15 @@ EduTrack/
 
 ---
 
-## 🚀 Installation
+## 🚀 Installation & Setup
 
-**1. Clone the repo**
+### Prerequisites
+- [Flutter SDK](https://flutter.dev/docs/get-started/install) installed
+- A free [Supabase](https://supabase.com) account
+
+### Steps
+
+**1. Clone the repository**
 ```bash
 git clone https://github.com/basavarajpatil660/EduTrack.git
 cd EduTrack
@@ -101,49 +99,31 @@ flutter pub get
 ```
 
 **3. Set up Supabase**
-- Create a free project at [supabase.com](https://supabase.com)
-- Open the SQL Editor and run `supabase_schema.sql`
+- Create a new project at [supabase.com](https://supabase.com)
+- Go to **SQL Editor** in your Supabase dashboard
+- Run the `supabase_schema.sql` file to create all tables and policies
 
-**4. Add your credentials in `lib/main.dart`**
+**4. Add your credentials**
+
+In `lib/main.dart`, replace the placeholders:
 ```dart
 const String supabaseUrl = 'YOUR_SUPABASE_URL';
 const String supabaseAnonKey = 'YOUR_SUPABASE_ANON_KEY';
 ```
-> Find these at: Supabase Dashboard → Project Settings → API
+> **Find these at:** Supabase Dashboard → Project Settings → API
 
 **5. Run the app**
 ```bash
 flutter run
 ```
 
-> ⚠️ Supabase credentials have been intentionally removed from this repo.
-> Never commit API keys to a public repository.
-
 ---
 
-## 📸 Screenshots
+## 🔐 Security Notice
 
-| Login | Teacher Dashboard | Student Dashboard |
-|-------|------------------|------------------|
-| coming soon | coming soon | coming soon |
-
----
-
-## 🔮 Future Improvements
-
-- [ ] Admin role with full system oversight
-- [ ] Push notifications for low attendance warnings
-- [ ] Timetable management module
-- [ ] Dark mode support
-- [ ] Play Store release
-
----
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-Feel free to open an issue or submit a pull request.
-Please follow standard GitHub flow — fork → branch → PR.
+Supabase credentials have been intentionally removed from this repository.
+Never commit API keys to a public repo.
+Follow **Step 4** above to add your own credentials before running the project.
 
 ---
 

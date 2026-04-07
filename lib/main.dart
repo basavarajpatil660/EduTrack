@@ -1,3 +1,10 @@
+// Supabase credentials have been removed for security reasons.
+// To run this project:
+// 1. Create a free account at https://supabase.com
+// 2. Create a new project
+// 3. Run the supabase_schema.sql file in your Supabase SQL Editor
+// 4. Replace the values below with your own project URL and Anon Key
+// 5. You can find these in: Supabase Dashboard → Project Settings → API
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'theme.dart';
@@ -13,8 +20,8 @@ void main() async {
   
   // Initialize Supabase (Use your project credentials)
   await Supabase.initialize(
-    url: 'https://dpbvopdmyelattjcwrmy.supabase.co',
-    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRwYnZvcGRteWVsYXR0amN3cm15Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwMTcxOTcsImV4cCI6MjA4OTU5MzE5N30.C_IhhjCNr5z_59ZQeEyumt862od-orMAhmBriU8vv5c',
+    url: '<YOUR_SUPABASE_URL>',
+    anonKey: 'YOUR_SUPABASE_ANON_KEY',
   );
 
   runApp(const EduTrackApp());

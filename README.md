@@ -49,3 +49,8 @@ EduTrack is a comprehensive Flutter-based mobile application designed for colleg
   - `screens/`: All page templates and screens.
   - `widgets/`: Reusable functional flutter widgets.
 - `supabase_schema.sql`: Your backend structure and policies for an easy reproduction of the DB in Supabase.
+
+## ⚠️ Important Note on Credentials
+
+The Supabase URL and Anon Key have been removed from this repo for security reasons.
+To run this project locally, follow the Setup Instructions above and add your own Supabase credentials.

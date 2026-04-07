@@ -1,56 +1,95 @@
-# EduTrack College App
+# EduTrack — College Management App
 
-EduTrack is a comprehensive Flutter-based mobile application designed for colleges and universities. It provides role-based access for both students and teachers, streamlining attendance tracking, marks management, and student information over a secure platform.
+![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?logo=flutter)
+![Supabase](https://img.shields.io/badge/Supabase-Backend-3ECF8E?logo=supabase)
+![Dart](https://img.shields.io/badge/Dart-Language-0175C2?logo=dart)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-## Features
+EduTrack is a Flutter-based mobile application built for colleges and universities.
+It provides secure, role-based access for students and teachers — streamlining
+attendance tracking, marks management, and student records in one place.
 
-- **Role-based Authentication:** Secure login for students and teachers using Supabase.
-- **Teacher Workspace:**
-  - View and manage student lists.
-  - Add new students to the system.
-  - Mark daily attendance.
-  - Upload internal and external marks.
-- **Student Workspace:**
-  - View personal attendance records.
-  - Check attendance percentages.
-- **Modern UI:** Built with Material Design 3 and a consistent navy blue color scheme.
+---
 
-## Tech Stack
+## ✨ Features
 
-- **Frontend:** Flutter (Dart)
-- **Backend:** Supabase (Auth & Realtime Database)
-- **Assets/Styling:** Material 3, Google Fonts, SVG rendering
+### 👨‍🏫 Teacher
+- View and manage the full student list
+- Add new students to the system
+- Mark daily attendance
+- Upload internal and external marks
 
-## Setup Instructions
+### 👨‍🎓 Student
+- View personal attendance records
+- Check attendance percentage at a glance
 
-1. **Clone the repo**
-   ```bash
-   git clone <your_github_repo_url>
-   ```
-   
-2. **Install dependencies**
-   ```bash
-   flutter pub get
-   ```
+### 🎨 General
+- Role-based authentication via Supabase
+- Material Design 3 UI with a navy blue theme
+- Google Fonts & SVG rendering
 
-3. **Database Configuration**
-   - Head over to Supabase and create a new project.
-   - Run the `supabase_schema.sql` file in your Supabase SQL Editor to set up all tables and security policies.
-   - Update `main.dart` with your Supabase URL and Anon Key.
-   
-4. **Run the App**
-   ```bash
-   flutter run
-   ```
+---
 
-## Folder Structure
+## 🛠️ Tech Stack
 
-- `lib/`: Contains the Dart source files.
-  - `screens/`: All page templates and screens.
-  - `widgets/`: Reusable functional flutter widgets.
-- `supabase_schema.sql`: Your backend structure and policies for an easy reproduction of the DB in Supabase.
+| Layer | Technology |
+|-------|-----------|
+| Frontend | Flutter (Dart) |
+| Backend | Supabase (Auth + Database) |
+| UI | Material Design 3, Google Fonts |
 
-## ⚠️ Important Note on Credentials
+---
 
-The Supabase URL and Anon Key have been removed from this repo for security reasons.
-To run this project locally, follow the Setup Instructions above and add your own Supabase credentials.
+## 🚀 Setup Instructions
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/basavarajpatil660/EduTrack.git
+cd EduTrack
+```
+
+### 2. Install dependencies
+```bash
+flutter pub get
+```
+
+### 3. Configure Supabase
+- Create a free project at [supabase.com](https://supabase.com)
+- Open the **SQL Editor** in your Supabase dashboard
+- Run the `supabase_schema.sql` file to set up all tables and policies
+- In `lib/main.dart`, replace the placeholder values:
+```dart
+const String supabaseUrl = 'YOUR_SUPABASE_URL';
+const String supabaseAnonKey = 'YOUR_SUPABASE_ANON_KEY';
+```
+> Find these in: Supabase Dashboard → Project Settings → API
+
+### 4. Run the app
+```bash
+flutter run
+```
+
+---
+
+## 📁 Folder Structure
+EduTrack/
+├── lib/
+│   ├── screens/        # All app screens (login, dashboard, attendance, marks...)
+│   ├── widgets/        # Reusable UI components
+│   └── main.dart       # App entry point & Supabase config
+├── supabase_schema.sql # Full database schema & RLS policies
+└── pubspec.yaml        # Dependencies
+
+---
+
+## 🔐 Security Notice
+
+Supabase credentials (URL and Anon Key) have been intentionally removed
+from this repository. Never commit API keys to a public repo.
+Follow Step 3 above to add your own credentials before running the project.
+
+---
+
+## 👨‍💻 Developer
+
+Made by [Basavaraj Patil](https://github.com/basavarajpatil660)
